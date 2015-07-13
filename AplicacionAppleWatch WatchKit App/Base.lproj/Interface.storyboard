@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4uc-vT-gom">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="dxf-Ru-TKQ">
+            <objects>
+                <controller id="4uc-vT-gom">
+                    <items>
+                        <label width="136" height="50" alignment="left" text="Escoje una modalidad" textAlignment="center" numberOfLines="2" id="lHA-1w-7Wl"/>
+                        <button width="1" alignment="left" title="Pensar" id="HsD-VI-xKF">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="modal" id="Ryg-05-gRc"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Adivinar" id="5uZ-rS-gLy">
+                            <connections>
+                                <segue destination="eNa-zC-jK6" kind="modal" id="wJ9-9u-9Yu"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-24" y="453"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc">
+                    <items>
+                        <label width="136" height="69" alignment="left" text="Piensa un número de 1 a 100" textAlignment="center" numberOfLines="2" id="CoK-wh-gwb"/>
+                        <button width="1" alignment="left" title="Siguiente" id="qTa-eB-70w">
+                            <connections>
+                                <segue destination="NGW-uF-Mnj" kind="modal" id="b5h-6b-BrJ"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Swx-06-asq">
+            <objects>
+                <controller id="NGW-uF-Mnj" customClass="InterfaceController">
+                    <items>
+                        <label width="135" alignment="left" text="Es 50?" textAlignment="center" id="Opd-Ba-Kib"/>
+                        <button width="1" alignment="left" title="Menor" id="SLI-sR-cSi">
+                            <color key="backgroundColor" red="0.65727588383838387" green="0.55829547173076777" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="ButtonLess" destination="NGW-uF-Mnj" id="zWX-31-PGb"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Mayor" id="ugF-9S-2qX">
+                            <color key="backgroundColor" red="0.61590514520202022" green="0.073424333549404489" blue="0.095655920917519996" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="ButtonMore" destination="NGW-uF-Mnj" id="fU6-si-6ew"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Correcto" id="CCl-Vn-YKN">
+                            <color key="backgroundColor" red="0.048701009750607996" green="0.37699258207070707" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="Correcto" destination="CCl-Vn-YKN" id="wwR-37-grO"/>
+                        <outlet property="Mayor" destination="ugF-9S-2qX" id="GTA-fU-p04"/>
+                        <outlet property="Menor" destination="SLI-sR-cSi" id="gLE-Fs-FMQ"/>
+                        <outlet property="Text" destination="Opd-Ba-Kib" id="EFq-sg-LMS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="493" y="345"/>
+        </scene>
+        <!--Adivina Controller-->
+        <scene sceneID="1Z2-qS-qQ6">
+            <objects>
+                <controller id="eNa-zC-jK6" customClass="AdivinaController">
+                    <items>
+                        <label width="134" alignment="left" text="Adivina el número" textAlignment="center" id="EOB-yt-csX"/>
+                        <group width="1" alignment="left" id="JBV-fq-Wn5">
+                            <items>
+                                <button width="0.20000000000000015" widthAdjustment="6" alignment="left" title="1" id="eoq-QR-Xkg">
+                                    <connections>
+                                        <action selector="Number1:" destination="eNa-zC-jK6" id="Zio-zu-qJp"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000015" widthAdjustment="6" alignment="left" title="2" id="dG8-kB-WSW">
+                                    <connections>
+                                        <action selector="Number2:" destination="eNa-zC-jK6" id="IM4-b2-1Yj"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000015" widthAdjustment="6" alignment="left" title="3" id="b39-lf-UQR">
+                                    <connections>
+                                        <action selector="Number3:" destination="eNa-zC-jK6" id="nSZ-Cb-TU8"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000015" widthAdjustment="6" alignment="left" title="4" id="fE5-NJ-MzN">
+                                    <connections>
+                                        <action selector="Number4:" destination="eNa-zC-jK6" id="hel-IW-DX8"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="ho1-dt-erR">
+                            <items>
+                                <button width="0.20000000000000015" widthAdjustment="6" alignment="left" title="5" id="WXE-qY-QWf">
+                                    <connections>
+                                        <action selector="Number5:" destination="eNa-zC-jK6" id="bLD-pw-BPY"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000015" widthAdjustment="6" alignment="left" title="6" id="v2i-8e-Twt">
+                                    <connections>
+                                        <action selector="Number6:" destination="eNa-zC-jK6" id="OMy-s0-doO"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000015" widthAdjustment="6" alignment="left" title="7" id="DQr-lF-3lr">
+                                    <connections>
+                                        <action selector="Number7:" destination="eNa-zC-jK6" id="EmU-ai-QZl"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000015" widthAdjustment="6" alignment="left" title="8" id="d4A-pf-WIF">
+                                    <connections>
+                                        <action selector="Number8:" destination="eNa-zC-jK6" id="Xvd-aq-5wI"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="6Qm-6u-Ng7">
+                            <items>
+                                <button width="0.20000000000000015" widthAdjustment="6" alignment="left" title="9" id="VDq-0j-DWJ">
+                                    <connections>
+                                        <action selector="Number9:" destination="eNa-zC-jK6" id="nr6-j6-goJ"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000015" widthAdjustment="6" alignment="left" title="0" id="nQ4-uR-5tR">
+                                    <connections>
+                                        <action selector="Number0:" destination="eNa-zC-jK6" id="hjd-Wm-zNd"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" alignment="left" title="Go" id="p54-Lx-ULP">
+                                    <connections>
+                                        <action selector="Go:" destination="eNa-zC-jK6" id="OrA-GH-Gkx"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="Number0" destination="nQ4-uR-5tR" id="hQe-uh-Aes"/>
+                        <outlet property="taxtLabel" destination="EOB-yt-csX" id="Rsv-Hi-5w1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="579"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="36" y="866"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="507" y="875"/>
+        </scene>
+    </scenes>
+</document>
